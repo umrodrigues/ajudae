@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Ajudaê
 
-## Getting Started
+**Ajudaê** é uma plataforma que conecta pessoas dispostas a fazer voluntariado com ONGs que estão em busca de voluntários. Nosso objetivo é fortalecer o impacto social, promovendo conexões significativas entre quem quer ajudar e quem precisa de apoio.
 
-First, run the development server:
+> 💬 *"Às vezes, tudo o que alguém precisa é de uma mão amiga — e estamos aqui para aproximar essas mãos."*
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi desenvolvido com as seguintes tecnologias modernas:
+
+- [**Next.js**](https://nextjs.org) – Framework React para produção
+- [**React**](https://reactjs.org/) – Biblioteca para interfaces de usuário
+- [**Tailwind CSS**](https://tailwindcss.com/) – Utilitário de CSS para estilização rápida
+- [**TypeScript**](https://www.typescriptlang.org/) – Tipagem estática para JavaScript
+- [**ShadCN/UI**](https://ui.shadcn.dev/) – Componentes de UI acessíveis e prontos para produção
+- [**Framer Motion**](https://www.framer.com/motion/) – Animações fluidas em React
+- [**Vercel**](https://vercel.com) – Deploy e hospedagem com CI/CD integrado
+
+---
+
+## 🛠️ Começando
+
+Para rodar o projeto localmente, siga os passos abaixo:
 
 ```bash
+npm install
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Depois, acesse [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar a aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✏️ Estrutura de Edição
 
-## Learn More
+A página principal pode ser editada no arquivo:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+app/page.tsx
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O conteúdo será atualizado automaticamente conforme você salva as alterações.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este projeto também utiliza [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) para otimizar o carregamento da fonte [Geist](https://vercel.com/font).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Saiba Mais
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Quer aprender mais sobre o que usamos aqui?
+
+- [Documentação do Next.js](https://nextjs.org/docs)
+- [Tutorial interativo do Next.js](https://nextjs.org/learn)
+- [Repositório no GitHub](https://github.com/vercel/next.js)
+
+---
+
+## ☁️ Deploy na Vercel
+
+A maneira mais fácil de colocar este projeto no ar é pela [plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+
+Confira a [documentação oficial de deploy](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
+
+---
+
+Feito com 💛 por pessoas que acreditam no poder do bem.  
+**Ajudaê — Juntos, fazemos a diferença.**
