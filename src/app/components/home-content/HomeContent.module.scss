@@ -1,46 +1,105 @@
 .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #fef8ec;
-    padding: 3rem 2rem;
-    border-radius: 16px;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fef8ec;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.textContent {
+  max-width: 500px;
+  text-align: center;
+
+  h1 {
+    font-size: 3.2rem;
+    color: #1a2e35;
+    margin-bottom: 1rem;
+    line-height: 1.1;
   }
-  
+
+  p {
+    font-size: 1.6rem;
+    color: #4f4f4f;
+    margin-bottom: 2rem;
+  }
+}
+
+.button {
+  background-color: #f97316;
+  color: #fff;
+  padding: 1.2rem 5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.imageContent {
+  flex-shrink: 0;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
   .textContent {
-    max-width: 500px;
-  
+    max-width: 100%;
+    padding: 0 1rem;
+
     h1 {
-      font-size: 4rem;
-      color: #1a2e35;
-      margin-bottom: 1rem;
+      font-size: 2.4rem;
     }
-  
+
     p {
-      font-size: 2rem;
-      color: #4f4f4f;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
     }
   }
-  
+
   .button {
-    background-color: #f97316;
-    color: #fff;
-    padding: 1.2rem 6.5rem;
+    padding: 1rem 3rem;
     font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  
-    &:hover {
-      background-color: #ea580c;
-    }
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
-  
+
   .imageContent {
-    flex-shrink: 0;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2rem;
   }
-  
+}
+
+@media (max-width: 400px) {
+  .textContent h1 {
+    font-size: 1.8rem;
+  }
+  .textContent p {
+    font-size: 1rem;
+  }
+  .button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+  .imageContent {
+    max-width: 100%;
+    width: 100%;
+  }
+}
