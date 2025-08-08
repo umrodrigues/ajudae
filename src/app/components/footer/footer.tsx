@@ -4,42 +4,37 @@ import styles from './Footer.module.scss';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.column}>
-        <h3>Ajudaê</h3>
-        <ul>
-          <li>Sobre nós</li>
-          <li>Nossa missão</li>
-          <li>Blog</li>
-        </ul>
-      </div>
-      <div className={styles.column}>
-        <h3>Voluntários</h3>
-        <ul>
-          <li>Encontre oportunidades</li>
-          <li>Como funciona</li>
-          <li>Dúvidas frequentes</li>
-        </ul>
-      </div>
-      <div className={styles.column}>
-        <h3>ONGs</h3>
-        <ul>
-          <li>Cadastre sua ONG</li>
-          <li>Benefícios</li>
-          <li>Suporte</li>
-        </ul>
-      </div>
-      <div className={styles.column}>
-        <h3>Contato</h3>
-        <p>contato@ajudae.org</p>
-        <div className={styles.socials}>
-          <FaInstagram />
-          <FaLinkedinIn />
-          <FaFacebookF />
+      <div className={styles.content}>
+        <div className={styles.logoSection}>
+          <h2>Ajudaê</h2>
+          <p>Conectando voluntários e ONGs para um mundo melhor.</p>
+          <div className={styles.socials}>
+            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
+          </div>
         </div>
-        <ul>
-          <li>Política de privacidade</li>
-          <li>Termos de uso</li>
-        </ul>
+        <nav className={styles.navSection}>
+          <ul>
+            <li><strong>Ajudaê</strong></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <ul>
+            <li><strong>Voluntários</strong></li>
+            <li><a href="#">Encontre oportunidades</a></li>
+            <li><a href="#">Dúvidas frequentes</a></li>
+          </ul>
+          <ul>
+            <li><strong>Contato</strong></li>
+            <li><a href="mailto:contato@ajudae.org">contato@ajudae.org</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Termos de uso</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div className={styles.copy}>
+        © {new Date().getFullYear()} Ajudaê. Todos os direitos reservados.
       </div>
     </footer>
   );
