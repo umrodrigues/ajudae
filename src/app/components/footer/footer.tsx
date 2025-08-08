@@ -18,7 +18,6 @@ export default function Footer() {
           <ul>
             <li><strong>Ajudaê</strong></li>
             <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Blog</a></li>
           </ul>
           <ul>
             <li><strong>Voluntários</strong></li>
