@@ -1,27 +1,52 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { HiMenu, HiX } from 'react-icons/hi'
 import styles from './HamburgerMenu.module.scss'
 
 export default function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false)
+  const wrapperRef = useRef<HTMLDivElement | null>(null)
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+  useEffect(() => {
+    function handleOutside(e: MouseEvent | TouchEvent) {
+      if (!wrapperRef.current) return
+      if (e.target instanceof Node && !wrapperRef.current.contains(e.target)) {
+        setIsOpen(false)
+      }
+    }
+
+    function handleEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') setIsOpen(false)
+    }
+
+    document.addEventListener('mousedown', handleOutside)
+    document.addEventListener('touchstart', handleOutside)
+    document.addEventListener('keydown', handleEsc)
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutside)
+      document.removeEventListener('touchstart', handleOutside)
+      document.removeEventListener('keydown', handleEsc)
+    }
+  }, [])
 
   return (
-    <div>
-      <div className={styles.icon} onClick={toggleMenu}>
-        {isOpen ? <HiX size={32} /> : <HiMenu size={32} />}
-      </div>
+    <div className={styles.wrapper} ref={wrapperRef}>
+      <button
+        className={styles.icon}
+        aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(v => !v)}
+      >
+        {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+      </button>
 
-      <div className={isOpen ? styles.menu : styles.hidden}>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Voluntariar</a>
-        <a href="#">Contato</a>
-      </div>
+      <nav className={`${styles.menu} ${isOpen ? styles.open : ''}`} role="menu" aria-hidden={!isOpen}>
+        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Início</a>
+        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Sobre</a>
+        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Voluntariar</a>
+        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Contato</a>
+      </nav>
     </div>
   )
 }
