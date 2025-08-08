@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './HomeContent.module.scss'
 
 export default function HomeContent() {
@@ -7,7 +8,9 @@ export default function HomeContent() {
       <div className={styles.textContent}>
         <h1>Conecte-se com oportunidades de voluntariado</h1>
         <p>Junte-se a ONGs que precisam de voluntários</p>
-        <button className={styles.button}>Explorar oportunidades</button>
+        <Link href="/oportunidades">
+          <button className={styles.button}>Explorar oportunidades</button>
+        </Link>
       </div>
       <div className={styles.imageContent}>
         <Image

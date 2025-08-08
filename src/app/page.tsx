@@ -1,13 +1,12 @@
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
-import HomeContent from "./ui/home-content/home-content";
+import DefaultLayout from "./components/default-layout/default-layout";
+import HomeContent from "./components/home-content/home-content";
 
 export default function Home() {
   return (
     <>
-    <Header />
-    <HomeContent />
-    <Footer/>
+    <DefaultLayout>
+      <HomeContent />
+    </DefaultLayout>
     </>
   );
 }
