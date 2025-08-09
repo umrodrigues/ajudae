@@ -54,8 +54,8 @@ export default function OportunityPage() {
             <Image
               src={oportunity.image}
               alt={oportunity.title}
-              width={500}
-              height={320}
+              width={400}
+              height={260}
               priority
               className={styles.image}
             />
