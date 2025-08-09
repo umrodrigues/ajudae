@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import styles from './OportunityContent.module.scss'
 import { oportunitys } from './__mocks__/oportunity.mock'
 import OportunityCard from '../oportunity-card/oportunity-card'
@@ -20,23 +21,31 @@ export default function OportunityContent() {
       </motion.h2>
 
       {hasOportunities ? (
-        <motion.div
-          className={styles.productsGrid}
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.15,
+        <>
+          <motion.div
+            className={styles.productsGrid}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
               },
-            },
-          }}
-        >
-          {oportunitys.map(({ id, title, image }) => (
-            <OportunityCard key={id} title={title} image={image} />
-          ))}
-        </motion.div>
+            }}
+          >
+            {oportunitys.map(({ id, title, image }) => (
+              <OportunityCard key={id} title={title} image={image} />
+            ))}
+          </motion.div>
+
+          <div className={styles.registerButtonContainer}>
+            <Link href="/cadastro" className={styles.registerButton}>
+              Cadastrar nova OPORTUNIDADE de voluntariado
+            </Link>
+          </div>
+        </>
       ) : (
         <motion.div
           className={styles.emptyMessage}
@@ -47,9 +56,9 @@ export default function OportunityContent() {
           <p>Não há nenhuma oportunidade disponível no momento.</p>
           <p>
             Gostaria de se cadastrar?{' '}
-            <a href="/cadastro" className={styles.registerLink}>
+            <Link href="/cadastro" className={styles.registerLink}>
               Clique aqui
-            </a>
+            </Link>
           </p>
         </motion.div>
       )}

@@ -42,10 +42,8 @@ export default function HamburgerMenu() {
       </button>
 
       <nav className={`${styles.menu} ${isOpen ? styles.open : ''}`} role="menu" aria-hidden={!isOpen}>
-        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Início</a>
-        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Sobre</a>
-        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Voluntariar</a>
-        <a role="menuitem" href="#" onClick={() => setIsOpen(false)}>Contato</a>
+        <a role="menuitem" href="/" onClick={() => setIsOpen(false)}>Início</a>
+        <a role="menuitem" href="/contato" onClick={() => setIsOpen(false)}>Contato</a>
       </nav>
     </div>
   )

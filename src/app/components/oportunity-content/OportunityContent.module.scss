@@ -24,6 +24,40 @@
   gap: 2rem;
 }
 
+.registerButtonContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.registerButton {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  background-color: #ea580c;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(234, 88, 12, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+.registerButton:hover,
+.registerButton:focus {
+  background-color: #c94a09;
+  box-shadow: 0 6px 14px rgba(201, 74, 9, 0.7);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.registerButton:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 7px rgba(201, 74, 9, 0.5);
+}
+
 .emptyMessage {
   text-align: center;
   color: #4a5568;
