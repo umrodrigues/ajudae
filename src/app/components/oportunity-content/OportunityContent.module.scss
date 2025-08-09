@@ -20,33 +20,6 @@
   gap: 2rem;
 }
 
-.productCard {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 1rem;
-  cursor: pointer;
-  user-select: none;
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.imageWrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.productTitle {
-  font-size: 1.3rem;
-  color: #1a2e35;
-  text-align: center;
-  font-weight: 600;
-}
-
 @media (max-width: 1024px) {
   .productsGrid {
     grid-template-columns: repeat(2, 1fr);
