@@ -104,6 +104,23 @@
   user-select: text;
   width: 100%;
   max-width: 1080px;
+
+  a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #81d8d0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      color: #a1d8d0;
+      text-decoration: underline;
+      outline: none;
+    }
+  }
 }
 
 @media (max-width: 720px) {

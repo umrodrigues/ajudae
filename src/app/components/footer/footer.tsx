@@ -15,7 +15,6 @@ export default function Footer() {
           </div> */}
         </div>
         <nav className={styles.navSection}>
-    
           <ul>
             <li><strong>Voluntários</strong></li>
             <li><a href="/oportunidades">Encontre oportunidades</a></li>
@@ -31,6 +30,16 @@ export default function Footer() {
       </div>
       <div className={styles.copy}>
         © {new Date().getFullYear()} Ajudaê. Todos os direitos reservados.
+        <br />
+        <a
+          href="https://www.lunaristech.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.devBy}
+          aria-label="Desenvolvido por Lunaris Tech"
+        >
+          Development by Lunaris Tech
+        </a>
       </div>
     </footer>
   );
