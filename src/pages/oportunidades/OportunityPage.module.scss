@@ -1,0 +1,157 @@
+.pageContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Inter', sans-serif;
+  color: #1a2e35;
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #555;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  
+  .image {
+    border-radius: 16px;
+  }
+}
+
+.details {
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .infoGroup {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+
+    div {
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: #ea580c;
+      }
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+  }
+
+  .requirements {
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: #ea580c;
+    }
+
+    ul {
+      list-style: inside disc;
+      color: #444;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.actions {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.volunteerButton {
+  background-color: #ea580c;
+  color: white;
+  padding: 0.85rem 2.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c74a09;
+  }
+}
+
+.backLink {
+  border: 2px solid #ea580c;
+  color: #ea580c;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ea580c;
+    color: white;
+  }
+}
+
+.notFound {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .backButton {
+    background-color: #ea580c;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #c74a09;
+    }
+  }
+}

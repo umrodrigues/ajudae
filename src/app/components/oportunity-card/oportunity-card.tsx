@@ -2,16 +2,20 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import styles from './OportunityCard.module.scss'
 
 interface OportunityCardProps {
+  id: number
   title: string
   image: string
 }
 
-export default function OportunityCard({ title, image }: OportunityCardProps) {
+export default function OportunityCard({ id, title, image }: OportunityCardProps) {
+  const router = useRouter()
+
   function handleClick() {
-    console.log('Quero me voluntariar')
+    router.push(`/oportunidades/${id}`)
   }
 
   return (

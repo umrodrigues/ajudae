@@ -36,7 +36,7 @@ export default function OportunityContent() {
             }}
           >
             {oportunitys.map(({ id, title, image }) => (
-              <OportunityCard key={id} title={title} image={image} />
+              <OportunityCard key={id} id={id} title={title} image={image} />
             ))}
           </motion.div>
 
