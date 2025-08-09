@@ -85,7 +85,7 @@ export default function RegisterContent() {
         </button>
 
         {isSubmitSuccessful && (
-          <p className={styles.successMessage}>Cadastro realizado com sucesso! Obrigado.</p>
+          <p className={styles.successMessage}>Cadastro realizado com sucesso, em breve nossa equipe irá entrar em contato com você! Obrigado.</p>
         )}
       </form>
     </section>
