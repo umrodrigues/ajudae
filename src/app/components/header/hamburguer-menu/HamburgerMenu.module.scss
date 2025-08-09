@@ -66,14 +66,30 @@
 
 @media (max-width: 420px) {
   .menu {
-    right: 8px;
-    left: 8px;
-    min-width: initial;
-    padding: 0.25rem 0;
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.5rem 0;
+    background-color: #fff;
   }
 
   .menu a {
-    padding: 12px 14px;
-    font-size: 1rem;
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .menu a:last-child {
+    border-bottom: none;
   }
 }
+
