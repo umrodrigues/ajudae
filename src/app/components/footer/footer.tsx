@@ -8,11 +8,11 @@ export default function Footer() {
         <div className={styles.logoSection}>
           <h2>Ajudaê</h2>
           <p>Conectando voluntários e ONGs para um mundo melhor.</p>
-          <div className={styles.socials}>
+          {/* <div className={styles.socials}>
             <a href="#" aria-label="Instagram"><FaInstagram /></a>
             <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-          </div>
+          </div> */}
         </div>
         <nav className={styles.navSection}>
     
