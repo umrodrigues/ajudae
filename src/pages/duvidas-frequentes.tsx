@@ -1,14 +1,14 @@
 
-import RegisterContent from "@/app/components/register-content/register-content";
 import "../app/globals.css";
 import DefaultLayout from "@/app/components/default-layout/default-layout";
+import Faq from "@/app/components/faq/faq";
 
 
-export default function Register() {
+export default function DuvidasFrequentes() {
   return (
     <>
      <DefaultLayout>
-      <RegisterContent/>
+      <Faq/>
      </DefaultLayout>
     </>
   );

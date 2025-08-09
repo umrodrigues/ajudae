@@ -15,20 +15,17 @@ export default function Footer() {
           </div>
         </div>
         <nav className={styles.navSection}>
-          <ul>
-            <li><strong>Ajudaê</strong></li>
-            <li><a href="#">Sobre nós</a></li>
-          </ul>
+    
           <ul>
             <li><strong>Voluntários</strong></li>
-            <li><a href="#">Encontre oportunidades</a></li>
-            <li><a href="#">Dúvidas frequentes</a></li>
+            <li><a href="/oportunidades">Encontre oportunidades</a></li>
+            <li><a href="/duvidas-frequentes">Dúvidas frequentes</a></li>
           </ul>
           <ul>
             <li><strong>Contato</strong></li>
-            <li><a href="mailto:contato@ajudae.org">contato@ajudae.org</a></li>
-            <li><a href="#">Política de privacidade</a></li>
-            <li><a href="#">Termos de uso</a></li>
+            <li><a href="mailto:faleconosco.ajudae@gmail.com">faleconosco.ajudae@gmail.com</a></li>
+            <li><a href="/politica-de-privacidade">Política de privacidade</a></li>
+            <li><a href="/termos-de-uso">Termos de uso</a></li>
           </ul>
         </nav>
       </div>

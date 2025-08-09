@@ -1,14 +1,14 @@
 
-import RegisterContent from "@/app/components/register-content/register-content";
 import "../app/globals.css";
 import DefaultLayout from "@/app/components/default-layout/default-layout";
+import PrivacyPolicy from "@/app/components/privacy-policy/privacy-policy";
 
 
-export default function Register() {
+export default function PoliticaDePrivacidade() {
   return (
     <>
      <DefaultLayout>
-      <RegisterContent/>
+      <PrivacyPolicy/>
      </DefaultLayout>
     </>
   );

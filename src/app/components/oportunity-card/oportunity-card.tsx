@@ -10,6 +10,10 @@ interface OportunityCardProps {
 }
 
 export default function OportunityCard({ title, image }: OportunityCardProps) {
+  function handleClick() {
+    console.log('Quero me voluntariar')
+  }
+
   return (
     <motion.div
       className={styles.productCard}
@@ -19,6 +23,12 @@ export default function OportunityCard({ title, image }: OportunityCardProps) {
       }}
       whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(234, 88, 12, 0.3)' }}
       whileTap={{ scale: 0.95 }}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') handleClick()
+      }}
     >
       <div className={styles.imageWrapper}>
         <Image
@@ -31,6 +41,16 @@ export default function OportunityCard({ title, image }: OportunityCardProps) {
         />
       </div>
       <h3 className={styles.productTitle}>{title}</h3>
+      <button
+        type="button"
+        className={styles.volunteerButton}
+        onClick={(e) => {
+          e.stopPropagation()
+          handleClick()
+        }}
+      >
+        Quero me voluntariar
+      </button>
     </motion.div>
   )
 }

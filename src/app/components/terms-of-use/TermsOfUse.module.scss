@@ -1,0 +1,48 @@
+.termsOfUse {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.15);
+  color: #1a2e35;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  user-select: text;
+
+  @media (max-width: 600px) {
+    padding: 1rem 1.2rem;
+    margin: 1rem;
+  }
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ea580c;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  color: #ea580c;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: #34434d;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
