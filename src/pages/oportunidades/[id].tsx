@@ -28,85 +28,105 @@ export default function OportunityPage() {
 
   return (
     <DefaultLayout>
-    <motion.main
-      className={styles.pageContainer}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
-      <motion.header
-        className={styles.header}
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1>{oportunity.title}</h1>
-        <p className={styles.subtitle}>Contribua para transformar vidas e fazer a diferença</p>
-      </motion.header>
-
-      <motion.div
-        className={styles.imageWrapper}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <Image
-          src={oportunity.image}
-          alt={oportunity.title}
-          width={700}
-          height={400}
-          priority
-          className={styles.image}
-        />
-      </motion.div>
-
-      <motion.section
-        className={styles.details}
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <h2>Sobre a oportunidade</h2>
-        <p>{oportunity.description}</p>
-
-        <div className={styles.infoGroup}>
-          <div>
-            <h3>Localização</h3>
-            <p>{oportunity.location}</p>
-          </div>
-          <div>
-            <h3>Data de início</h3>
-            <p>{oportunity.date}</p>
-          </div>
-        </div>
-
-        <div className={styles.requirements}>
-          <h3>Requisitos</h3>
-          <ul>
-            {oportunity.requirements.map((req, idx) => (
-              <li key={idx}>{req}</li>
-            ))}
-          </ul>
-        </div>
-      </motion.section>
-
-      <motion.div
-        className={styles.actions}
+      <motion.main
+        className={styles.pageContainer}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
+        transition={{ duration: 0.6 }}
       >
-        <button className={styles.volunteerButton}>Quero me voluntariar</button>
-        <Link href="/oportunidades" className={styles.backLink}>
-          Voltar para lista
-        </Link>
-      </motion.div>
-    </motion.main>
+        <motion.header
+          className={styles.header}
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1>{oportunity.title}</h1>
+          <p className={styles.subtitle}>Contribua para transformar vidas e fazer a diferença</p>
+        </motion.header>
 
-        <Link href="/oportunidades" className={styles.backLink}>
-        Voltar para lista
-        </Link>
+        <motion.div
+          className={styles.topContent}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className={styles.imageWrapper}>
+            <Image
+              src={oportunity.image}
+              alt={oportunity.title}
+              width={500}
+              height={320}
+              priority
+              className={styles.image}
+            />
+          </div>
+          <div className={styles.sideInfo}>
+            <div className={styles.infoGroup}>
+              <div>
+                <h3>Localização</h3>
+                <p>{oportunity.location}</p>
+              </div>
+              <div>
+                <h3>Data de início</h3>
+                <p>{oportunity.date}</p>
+              </div>
+              <div>
+                <h3>Vagas disponíveis</h3>
+                <p>{oportunity.slots ?? 'Indefinido'}</p>
+              </div>
+              <div>
+                <h3>Contato</h3>
+                <p>{oportunity.contact ?? 'Não informado'}</p>
+              </div>
+            </div>
+            <button className={styles.volunteerButton}>Quero me voluntariar</button>
+          </div>
+        </motion.div>
+
+        <motion.section
+          className={styles.details}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2>Sobre a oportunidade</h2>
+          <p>{oportunity.description}</p>
+
+          <div className={styles.requirements}>
+            <h3>Requisitos</h3>
+            <ul>
+              {oportunity.requirements.map((req, idx) => (
+                <li key={idx}>{req}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={styles.additionalInfo}>
+            <h3>Benefícios</h3>
+            <ul>
+              {(oportunity.benefits ?? [
+                'Certificado de participação',
+                'Experiência prática em campo',
+                'Ambiente colaborativo e inclusivo',
+                'Oportunidade de networking e crescimento pessoal',
+              ]).map((benefit, idx) => (
+                <li key={idx}>{benefit}</li>
+              ))}
+            </ul>
+          </div>
+        </motion.section>
+
+        <motion.div
+          className={styles.actions}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <Link href="/oportunidades" className={styles.backLink}>
+            Voltar para lista
+          </Link>
+        </motion.div>
+      </motion.main>
     </DefaultLayout>
   )
-  
 }
