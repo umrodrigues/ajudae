@@ -8,16 +8,64 @@
 
 .title {
   color: #1a2e35;
-  font-size: 2.8rem;
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 2.5rem;
-  font-weight: 700;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 3px rgba(26, 46, 53, 0.15);
 }
 
 .productsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #4a5568;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  border: 2px dashed #b4ad9f;
+  border-radius: 12px;
+  background-color: #fffbea;
+}
+
+.registerLink {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(90deg, #2a8fbd, #1c5d7d);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(42, 143, 189, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+.registerLink:hover,
+.registerLink:focus {
+  background: linear-gradient(90deg, #1c5d7d, #2a8fbd);
+  box-shadow: 0 6px 14px rgba(28, 93, 125, 0.7);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.registerLink:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 7px rgba(28, 93, 125, 0.5);
 }
 
 @media (max-width: 1024px) {
@@ -29,6 +77,10 @@
   .container {
     padding: 2rem 1.5rem;
   }
+
+  .title {
+    font-size: 2.4rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -38,6 +90,10 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .emptyMessage {
+    font-size: 1rem;
   }
 }
