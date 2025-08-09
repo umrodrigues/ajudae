@@ -155,3 +155,22 @@
     }
   }
 }
+
+.backLink {
+  border: 2px solid #ea580c;
+  color: #ea580c;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ea580c;
+    color: white;
+  }
+}

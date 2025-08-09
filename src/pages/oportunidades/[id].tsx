@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import "../../app/globals.css";
 import styles from './OportunityPage.module.scss'
 import { oportunitys } from '@/app/components/oportunity-content/__mocks__/oportunity.mock'
 import DefaultLayout from '@/app/components/default-layout/default-layout'
@@ -101,6 +102,10 @@ export default function OportunityPage() {
         </Link>
       </motion.div>
     </motion.main>
+
+        <Link href="/oportunidades" className={styles.backLink}>
+        Voltar para lista
+        </Link>
     </DefaultLayout>
   )
   
