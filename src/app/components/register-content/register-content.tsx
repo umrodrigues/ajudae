@@ -18,14 +18,23 @@ export default function RegisterContent() {
     reset,
   } = useForm<FormData>()
 
-  function onSubmit(data: FormData) {
-    return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        alert(`Cadastro realizado com sucesso!\n\n${JSON.stringify(data, null, 2)}`)
-        reset()
-        resolve()
-      }, 1200)
-    })
+  async function onSubmit(data: FormData) {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        alert(`Erro ao enviar: ${errorData.message || 'Erro desconhecido'}`)
+        return
+      }
+      reset()
+    } catch (error) {
+      alert(`Erro ao enviar: ${(error as Error).message}`)
+    }
   }
 
   return (
@@ -85,7 +94,9 @@ export default function RegisterContent() {
         </button>
 
         {isSubmitSuccessful && (
-          <p className={styles.successMessage}>Cadastro realizado com sucesso, em breve nossa equipe irá entrar em contato com você! Obrigado.</p>
+          <p className={styles.successMessage}>
+            Cadastro realizado com sucesso, em breve nossa equipe irá entrar em contato com você! Obrigado.
+          </p>
         )}
       </form>
     </section>
